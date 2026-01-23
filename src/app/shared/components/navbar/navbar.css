@@ -1,0 +1,56 @@
+.navbar{
+    display: flex;
+    position: fixed;
+    top: 0;
+
+    padding: 2rem;
+    width: 100%;
+}
+
+.navbar--scrolled{
+    background-color: rgba(23, 23, 23, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+    font-family: var(--cursiveFont);
+    color: var(--pink);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.navbar__menu{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+    margin-left: auto;
+}
+
+.menu__item{
+    font-family: var(--normalFont);
+    color: white;
+    font-size: 1.4rem;
+
+    transition: color 0.3s;
+}
+
+.menu__item:hover{
+    color: var(--pink);
+}
+
+.menu__shop-now{
+    font-family: var(--normalFont);
+    color: white;
+    font-size: 1.4rem;
+    
+    background-color: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+}
+
+.softWhite{
+    color: var(--white);
+}

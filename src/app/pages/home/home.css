@@ -1,0 +1,89 @@
+/* HERO */
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
+    background: var(--gradientMagentaT2B);
+    padding: 15rem;
+
+    text-align: center;
+    line-height: 4rem;
+}
+
+.hero__buttons{
+    display: flex;
+    gap: 3rem;
+}
+
+.buttons__main{
+    font-size: 2rem;
+
+    background: var(--gradientMagentaL2R);
+    border: 1px solid var(--pink);
+    padding: 1.5rem 2.5rem;
+    box-shadow: var(--glowPink);
+}
+
+.buttons__main:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--glowPinkHigh);
+}
+
+.buttons__secondary{
+    font-size: 2rem;
+
+    background-color: transparent;
+    padding: 1.5rem 2.5rem;
+}
+
+/* SECTIONS */
+
+/* Characteristics */
+
+.characteristics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.characteristics__traits{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.traits__trait{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trait__logo{
+    font-size: 3rem;
+
+    height: fit-content;
+    aspect-ratio: 1/1;
+    padding: 0.6rem;
+    background: var(--gradientMagentaL2R);
+    border-radius: 50%;    
+}
+
+.trait__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trait__title{
+    margin: 0;
+}
+
+.trait__description{
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--grey);
+}

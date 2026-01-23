@@ -1,8 +1,24 @@
 /* Import modern-normalize */
 @import 'modern-normalize/modern-normalize.css';
 
-/* Set rem sizing to 10px */
+:root{
+    --cursiveFont: 'Playfair Display', serif;
+    --normalFont: 'Montserrat', sans-serif;
+    
+    --pink: #ff69b4;
+    --deepPink: #ce439f;
+    --white: #e0e0e0;
+    --softWhite: #d1c1d1;
+    --grey: #909090;
 
+    --gradientMagentaL2R: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    --gradientMagentaT2B: linear-gradient(0deg, #8d3b67 0%, #571c3b 80%);
+    
+    --glowPink: 0 10px 30px rgba(255, 105, 180, 0.3);
+    --glowPinkHigh: 0 15px 40px rgba(255, 105, 180, 0.4);
+}
+
+/* Set rem sizing to 10px */
 html{
     box-sizing: border-box;
     font-size: 62.5%;
@@ -10,4 +26,60 @@ html{
 
 *, *:after, *:before{
     box-sizing: inherit;
+}
+
+/* Global Tag Overrides */
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 8rem;
+    line-height: 9rem;
+    color: var(--deepPink);
+}
+
+h2{
+    font-size: 4.5rem;
+    color: var(--softWhite);
+}
+
+h3{
+    font-size: 3rem;
+    color: var(--softWhite);
+}
+
+h4{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+p{
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+button{
+    color: white;
+
+    background-color: transparent;
+    border: 2px solid var(--deepPink);
+    border-radius: 4rem;
+    
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+section{
+    background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 10rem;
+}
+
+/* Animations */
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.3; }
 }
