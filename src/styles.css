@@ -10,12 +10,15 @@
     --white: #e0e0e0;
     --softWhite: #d1c1d1;
     --grey: #909090;
+    --black: #0a0a0a;
 
     --gradientMagentaL2R: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
     --gradientMagentaT2B: linear-gradient(0deg, #8d3b67 0%, #571c3b 80%);
     
     --glowPink: 0 10px 30px rgba(255, 105, 180, 0.3);
     --glowPinkHigh: 0 15px 40px rgba(255, 105, 180, 0.4);
+
+    --filterToPink: invert(71%) sepia(48%) saturate(3901%) hue-rotate(295deg) brightness(98%) contrast(113%);
 }
 
 /* Set rem sizing to 10px */
@@ -35,9 +38,18 @@ a{
 }
 
 h1{
-    font-size: 8rem;
+    font-family: var(--cursiveFont);
+    font-style: italic;
+    font-size: 7rem;
+    font-weight: 600;
     line-height: 9rem;
-    color: var(--deepPink);
+
+    /* Fancy text color fill */
+    background: linear-gradient(135deg, #ffd1dc 0%, var(--pink) 50%, var(--deepPink) 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    margin: 1rem;
 }
 
 h2{
@@ -46,7 +58,9 @@ h2{
 }
 
 h3{
-    font-size: 3rem;
+    font-family: var(--normalFont);
+    font-size: 2.6rem;
+    font-weight: 300;
     color: var(--softWhite);
 }
 
@@ -77,9 +91,25 @@ section{
     padding: 10rem;
 }
 
+section h2{
+    color: var(--pink);
+    font-size: 6rem;
+    font-family: var(--cursiveFont);
+    font-style: italic;
+    font-weight: 500;
+    margin: 0;
+}
+
+section h3{
+    color: var(--grey);
+    font-size: 2rem;
+
+    margin-bottom: 5rem;
+}
+
 /* Animations */
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.3; }
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
 }

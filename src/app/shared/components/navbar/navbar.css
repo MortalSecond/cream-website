@@ -5,12 +5,14 @@
 
     padding: 2rem;
     width: 100%;
+
+    transition: 0.3s;
 }
 
 .navbar--scrolled{
     background-color: rgba(23, 23, 23, 0.95);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.8rem);
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.3);
 }
 
 .logo{
@@ -31,8 +33,8 @@
 
 .menu__item{
     font-family: var(--normalFont);
-    color: white;
-    font-size: 1.4rem;
+    color: var(--softWhite);
+    font-size: 1.6rem;
 
     transition: color 0.3s;
 }
